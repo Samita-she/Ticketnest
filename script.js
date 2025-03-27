@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // Fetch and display the first movie's details
-    fetch("http://localhost:3000/films/1")
+    fetch("./db.json")
         .then(response => response.json())
         .then(movie => {
             console.log("Fetched Movie Data:", movie);
@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
         .catch(error => console.error("Error fetching first movie details:", error));
 
     // Fetch and display all movies in the sidebar
-    fetch("http://localhost:3000/films")
+    fetch("./ db.json")
         .then(response => response.json())
         .then(movies => {
             movies.forEach(movie => {
