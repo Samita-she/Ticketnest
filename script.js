@@ -22,6 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
     fetch("http://localhost:3000/films/1")
         .then(response => response.json())
         .then(movie => {
+            console.log("Fetched Movie Data:", movie);
             displayMovieDetails(movie);
         })
         .catch(error => console.error("Error fetching first movie details:", error));
